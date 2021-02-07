@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Hungry Monster</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <!-- starting of nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/icon.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Recipes</a>
+            <a class="nav-link" href="#">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End of nav bar -->
 
+    <!-- starting of searching section -->
 
-    <script src="js/script.js">
-    </script>
-</body>
+    <section
+      id="search-section"
+      class="container d-flex justify-content-center"
+    >
+      <input type="text" id="search-input" placeholder="Search for Meal" />
+      <button id="search-button" onclick="searchThefoodList()">Search</button>
+    </section>
+
+    <!-- End of searching section -->
+
+    <!-- starting of search result section -->
+    <div id="search-result-section" class="container d-flex"></div>
+    <!-- Ending of search result section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

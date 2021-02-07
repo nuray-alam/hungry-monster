@@ -1,0 +1,39 @@
+nav img {
+  width: 50%;
+}
+nav {
+  font-weight: bolder;
+  font-size: 20px;
+}
+#search-input {
+  width: 35%;
+  height: 50px;
+  margin: 0 3px;
+}
+#search-button {
+  background-color: #f06c4e;
+  width: 130px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+#search-result-section {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+}
+.food-item {
+  width: 180px;
+  padding: 5px;
+  background-color: #f06c4e;
+}
+.food-item img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+.food-item h3 {
+  font-size: 20px;
+  text-align: center;
+}
