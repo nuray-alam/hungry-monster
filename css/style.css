@@ -5,6 +5,11 @@ nav {
   font-weight: bolder;
   font-size: 20px;
 }
+#company-title {
+  margin: 0px auto;
+  font-size: 30px;
+  color: #ff4e4e;
+}
 #search-input {
   width: 35%;
   height: 50px;
@@ -56,4 +61,6 @@ nav {
 }
 #details-section li {
   list-style: none;
+  font-size: large;
+  font-weight: 400;
 }
