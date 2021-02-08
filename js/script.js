@@ -69,7 +69,12 @@ function showDetails(data) {
 // searching-function
 function searchThefoodList() {
     const searchInput = document.getElementById('search-input').value;
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
+    if(searchInput === ''){
+        alert('Please enter you meal name in the search box');
+    }
+    else{
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
         .then(response => response.json())
         .then(data => displayMatchedItem(data))
+    }
 }
