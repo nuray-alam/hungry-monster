@@ -33,6 +33,7 @@ searchedFoodItem.addEventListener('click', event => {
 function showDetails(data) {
     console.log(data);
     console.log(data.meals[0].strMeal);
+    const ingredientUl = document.createElement('ul');
     // searchedFoodItem.style.display = 'none';
     const detailsDiv = document.createElement('div');
     detailsDiv.className = 'details';
@@ -42,20 +43,24 @@ function showDetails(data) {
 `;
     detailsDiv.innerHTML = htmlElements;
 
-    const ingredientsUl = document.createElement('ul');
-    let li = document.createElement('li')
-    for (let i = 1; i < 15; i++) {
-        if (`data.meals[0].strIngredient${i}` === '') {
+    const foodInfo = data.meals[0];
+    for (let i = 1; i < 21; i++) {
+        const ingredients = `strIngredient${i}`;
+        const ingredientName = foodInfo[ingredients];
+        const ingredientsMeasurements = `strMeasure${i}`;
+        const ingredientMeasurementIndividual = foodInfo[ingredientsMeasurements];
+
+        if (ingredientName === '' || ingredientMeasurementIndividual ==='') {
             break;
         }
-        const item = `data.meals[0].strIngredient${i}`
-        li.innerText = data.meals[0].item;
-        // li.innerText = `${data.meals[0].strIngredient${i}}`
-        ingredientsUl.appendChild = li;
-        console.log(li);
+        const li = document.createElement('li');
+        li.innerText = `Ingredient ${i}: ${ingredientMeasurementIndividual} ${ingredientName}`;
+        ingredientUl.appendChild(li);
+        console.log(`Ingredient ${i}: ${ingredientName}`);
     }
-    detailsDiv.appendChild = ingredientsUl;
-    document.getElementById('details-section').appendChild = detailsDiv;
+    detailsDiv.appendChild(ingredientUl);
+    document.getElementById('search-result-section').style.display = 'none';
+    document.getElementById('details-section').appendChild(detailsDiv);
 
 }
 
