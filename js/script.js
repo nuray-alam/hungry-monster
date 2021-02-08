@@ -60,14 +60,13 @@ function showDetails(data) {
         ingredientUl.appendChild(li);
     }
     detailsDiv.appendChild(ingredientUl);
-    document.getElementById('search-result-section').style.display = 'none';
     document.getElementById('details-section').appendChild(detailsDiv);
 }
 
 // searching-function
 function searchThefoodList() {
     const searchInput = document.getElementById('search-input').value;
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInput}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
         .then(response => response.json())
         .then(data => displayMatchedItem(data))
 }
