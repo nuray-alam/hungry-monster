@@ -1,6 +1,9 @@
 // matching food item display function
 function displayMatchedItem(foodItems) {
     if (foodItems.meals != null) {
+
+        document.getElementById('note').style.display = 'block';
+
         foodItems.meals.forEach(meal => {
             const imageUrl = meal.strMealThumb;
             const foodItem = document.createElement('div');

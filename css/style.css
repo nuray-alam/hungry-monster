@@ -23,6 +23,13 @@ nav {
   border-radius: 5px;
   margin: 0 3px;
 }
+#note {
+  font-size: large;
+  text-align: center;
+  margin: 30px auto;
+  display: none;
+  color: lightgray;
+}
 #search-result-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
