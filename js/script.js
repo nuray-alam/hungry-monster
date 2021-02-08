@@ -70,7 +70,7 @@ function showDetails(data) {
 function searchThefoodList() {
     const searchInput = document.getElementById('search-input').value;
     if(searchInput === ''){
-        alert('Please enter you meal name in the search box');
+        alert('Please enter your meal name in the search box');
     }
     else{
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
